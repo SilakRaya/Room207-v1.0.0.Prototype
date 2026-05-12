@@ -5,9 +5,25 @@ extends Control
 @onready var credits_button = $Credits
 
 func _ready():
-	new_game_button.pressed.connect(_on_new_game_pressed)
-	options_button.pressed.connect(_on_options_pressed)
-	credits_button.pressed.connect(_on_credits_pressed)
+	print("NewGame button found: ", new_game_button != null)
+	print("Options button found: ", options_button != null)
+	print("Credits button found: ", credits_button != null)
+	
+	# Connect signals
+	if new_game_button:
+		new_game_button.pressed.connect(_on_new_game_pressed)
+	else:
+		push_error("NewGame button not found! Check node name.")
+	
+	if options_button:
+		options_button.pressed.connect(_on_options_pressed)
+	else:
+		push_error("Options button not found! Check node name.")
+	
+	if credits_button:
+		credits_button.pressed.connect(_on_credits_pressed)
+	else:
+		push_error("Credits button not found! Check node name.")
 
 func _on_new_game_pressed():
 	print("New Game button pressed")
