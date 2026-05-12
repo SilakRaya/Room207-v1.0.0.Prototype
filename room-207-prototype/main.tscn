@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bv7uk01qb30s2"]
+
+[ext_resource type="PackedScene" path="res://SilakRayaIntro.tscn" id="1_ig7tw"]
+
+[node name="Main" type="Node2D" unique_id=432920584]
+
+[node name="SilakRayaIntro" parent="." unique_id=1875510279 instance=ExtResource("1_ig7tw")]
+position = Vector2(3.0000076, -7)
+scale = Vector2(1.8, 1.8)
