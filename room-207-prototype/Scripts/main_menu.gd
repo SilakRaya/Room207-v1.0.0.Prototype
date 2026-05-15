@@ -39,3 +39,13 @@ func _on_credits_pressed():
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_marvin_pressed() -> void:
+	get_tree().change_scene_to_file("res://EpisodeOne/EpOneMarvin.tscn")
+	pass # Replace with function body.
+
+
+func _on_jolina_pressed() -> void:
+	get_tree().change_scene_to_file("res://EpisodeOne/EpOneJolina.tscn")
+	pass # Replace with function body.
