@@ -1,30 +1,11 @@
 extends Control
-
-@onready var new_game_button = $NewGame
-@onready var options_button = $Options
-@onready var credits_button = $Credits
 var characterSelects = ""
 
 func _ready():
-	print("NewGame button found: ", new_game_button != null)
-	print("Options button found: ", options_button != null)
-	print("Credits button found: ", credits_button != null)
-
-	# Connect signals
-	if new_game_button:
-		new_game_button.pressed.connect(_on_new_game_pressed)
-	else:
-		push_error("NewGame button not found! Check node name.")
-	
-	if options_button:
-		options_button.pressed.connect(_on_options_pressed)
-	else:
-		push_error("Options button not found! Check node name.")
-	
-	if credits_button:
-		credits_button.pressed.connect(_on_credits_pressed)
-	else:
-		push_error("Credits button not found! Check node name.")
+	$AnimationPlayer.play("RESET")
+	$AnimationPlayer.play("Intro")
+	await $AnimationPlayer.animation_finished
+	$AnimationPlayer.play("MainMenu")
 
 func _on_new_game_pressed():
 	$AnimationPlayer.play("NewGame")
@@ -115,3 +96,7 @@ func _on_episode_five_pressed() -> void:
 		"Marvin":
 			print("Marvin selected")
 			get_tree().change_scene_to_file("res://Episodes-Menu/EpisodeEmpty.tscn")
+
+
+func _on_area_2d_mouse_entered() -> void:
+	$AnimationPlayer.play("newGameMouseE")

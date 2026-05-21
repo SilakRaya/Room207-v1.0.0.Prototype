@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="Room207 (1.1.1)"
-run/main_scene="uid://bv7uk01qb30s2"
+run/main_scene="uid://cahe1tj8mpfib"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="uid://bga4rp07gq8wk"
-
-[autoload]
-
-BgMusic="*uid://cn5mjo66dbf7t"
 
 [display]
 

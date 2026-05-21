@@ -141,6 +141,7 @@ position = Vector2(317, 175)
 scale = Vector2(0.4, 0.4)
 
 [node name="instance25" type="Sprite2D" parent="Background" unique_id=1588571813]
+visible = false
 texture = ExtResource("1_li5b9")
 
 [node name="instance26" type="Node2D" parent="." unique_id=942417460]
