@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Room207 (1.1.1)"
-run/main_scene="uid://cahe1tj8mpfib"
+run/main_scene="uid://b1trcnyiophq4"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="uid://bga4rp07gq8wk"
 
@@ -26,6 +26,15 @@ window/stretch/aspect="keep_width"
 [dotnet]
 
 project/assembly_name="Room207-Prototype"
+
+[file_customization]
+
+folder_colors={
+"res://Blender/": "orange",
+"res://EpisodeOne/": "yellow",
+"res://Fonts/": "green",
+"res://Ost/": "pink"
+}
 
 [input]
 

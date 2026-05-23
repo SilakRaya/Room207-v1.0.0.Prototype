@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://csdk74vtk1r2x"]
+
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="1_p2tak"]
+
+[resource]
+font = ExtResource("1_p2tak")
+font_size = 50

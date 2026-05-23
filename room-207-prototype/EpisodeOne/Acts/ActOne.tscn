@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://b1trcnyiophq4"]
+
+[ext_resource type="Script" uid="uid://dgbgh1uod61f2" path="res://EpisodeOne/Acts/act_one.gd" id="1_a4jnn"]
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="1_ofxwg"]
+[ext_resource type="LabelSettings" uid="uid://csdk74vtk1r2x" path="res://Fonts/new_label_settings.tres" id="2_a4jnn"]
+[ext_resource type="Texture2D" uid="uid://by8g0eys7wt8k" path="res://EpisodeOne/Acosta/Jolina's Background.jpg" id="2_givfi"]
+[ext_resource type="AudioStream" uid="uid://dyns6m78d3ful" path="res://Ost/Takbo.wav" id="5_llmym"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a4jnn"]
+font = ExtResource("1_ofxwg")
+font_size = 49
+font_color = Color(1, 1, 1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_givfi"]
+font = ExtResource("1_ofxwg")
+font_size = 170
+outline_size = 50
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_a4jnn"]
+resource_name = "SilakRayaFade"
+length = 11.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroContainer/SilakRaya:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3, 4.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroContainer/DevMessage:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5, 6.5, 7.5333333, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntroContainer/BlackBg:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 9, 11, 11.033334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntroContainer/SkipButton:theme_override_colors/font_color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.02, 7.2, 8.966666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.8745098, 0.8745098, 0.8745098, 0), Color(0.8745098, 0.8745098, 0.8745098, 0.23529412), Color(0.8745098, 0.8745098, 0.8745098, 0.23529412), Color(0.8745098, 0.8745098, 0.8745098, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MainMenuContainer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 8.966666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_llmym"]
+resource_name = "MainMenu"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenuContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ofxwg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroContainer/SilakRaya:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroContainer/DevMessage:label_settings:font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntroContainer/BlackBg:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenuContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntroContainer/SkipButton:theme_override_colors/font_color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.8745098, 0.8745098, 0.8745098, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MainMenuContainer:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ekh7m"]
+_data = {
+&"Intro": SubResource("Animation_a4jnn"),
+&"MainMenu": SubResource("Animation_llmym"),
+&"RESET": SubResource("Animation_ofxwg")
+}
+
+[node name="Control" type="Control" unique_id=1171112234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a4jnn")
+
+[node name="JolinaBackground" type="Control" parent="." unique_id=1548231573]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="AcostaBg" type="Sprite2D" parent="JolinaBackground" unique_id=145119486]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_givfi")
+centered = false
+
+[node name="IntroContainer" type="PanelContainer" parent="." unique_id=169010216]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="BlackBg" type="ColorRect" parent="IntroContainer" unique_id=816482375]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SilakRaya" type="Label" parent="IntroContainer" unique_id=1838171971]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "SilakRaya Presents"
+label_settings = ExtResource("2_a4jnn")
+
+[node name="DevMessage" type="Label" parent="IntroContainer" unique_id=1471966178]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "This game is still on development!"
+label_settings = SubResource("LabelSettings_a4jnn")
+
+[node name="SkipButton" type="Button" parent="IntroContainer" unique_id=1403912996]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_fonts/font = ExtResource("1_ofxwg")
+theme_override_font_sizes/font_size = 50
+text = "Click me to skip!"
+flat = true
+
+[node name="MainMenuContainer" type="CenterContainer" parent="." unique_id=155897299]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.4859375
+anchor_bottom = 0.46944445
+offset_right = 658.0
+offset_bottom = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="FlowContainer" type="FlowContainer" parent="MainMenuContainer" unique_id=592646480]
+layout_mode = 2
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="Room207" type="Label" parent="MainMenuContainer/FlowContainer" unique_id=1604277888]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Room207"
+label_settings = SubResource("LabelSettings_givfi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenuContainer/FlowContainer" unique_id=1232734028]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="NewGame" type="Button" parent="MainMenuContainer/FlowContainer/VBoxContainer" unique_id=655903155]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_ofxwg")
+theme_override_font_sizes/font_size = 70
+text = "New Game"
+flat = true
+
+[node name="Options" type="Button" parent="MainMenuContainer/FlowContainer/VBoxContainer" unique_id=2120652101]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_ofxwg")
+theme_override_font_sizes/font_size = 70
+text = "Options"
+flat = true
+
+[node name="Credits" type="Button" parent="MainMenuContainer/FlowContainer/VBoxContainer" unique_id=311823662]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_ofxwg")
+theme_override_font_sizes/font_size = 70
+text = "Credits"
+flat = true
+
+[node name="Exit" type="Button" parent="MainMenuContainer/FlowContainer/VBoxContainer" unique_id=1918539448]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_ofxwg")
+theme_override_font_sizes/font_size = 70
+text = "Exit"
+flat = true
+
+[node name="BgMusic" type="AudioStreamPlayer2D" parent="." unique_id=989328096]
+stream = ExtResource("5_llmym")
+autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091699425]
+libraries/ = SubResource("AnimationLibrary_ekh7m")
+
+[connection signal="pressed" from="IntroContainer/SkipButton" to="." method="_on_skip_button_pressed"]
+[connection signal="pressed" from="MainMenuContainer/FlowContainer/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="animation_changed" from="AnimationPlayer" to="." method="_on_animation_player_animation_changed"]
