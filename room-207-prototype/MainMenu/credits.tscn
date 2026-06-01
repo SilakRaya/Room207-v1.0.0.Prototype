@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://d122ppiaeu3a0"]
+
+[ext_resource type="Texture2D" uid="uid://by8g0eys7wt8k" path="res://Ep1/Acosta/Jolina's Background.jpg" id="1_ct2ey"]
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="2_5m7h7"]
+[ext_resource type="PackedScene" uid="uid://ba7ygsgo4cjwu" path="res://MainMenu/ReturnBtn.tscn" id="3_5m7h7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qj33"]
+font = ExtResource("2_5m7h7")
+font_size = 135
+outline_size = 35
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ct2ey"]
+font = ExtResource("2_5m7h7")
+font_size = 80
+outline_size = 35
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[node name="Credits" type="Control" unique_id=1665944493]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AcostaBackground" type="Control" parent="." unique_id=1296110654]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Jolina\'sBackground" type="Sprite2D" parent="AcostaBackground" unique_id=398845379]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ct2ey")
+centered = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=657271332]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.2299805
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=410667867]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="SilakRaya" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=1543816761]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Silakraya"
+label_settings = SubResource("LabelSettings_0qj33")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SilakRaya2" type="Label" parent="ScrollContainer/VBoxContainer" unique_id=936116919]
+unique_name_in_owner = true
+layout_mode = 2
+text = "x40Arcade (Sobrepena)
+acosta
+felonia
+losamia
+paz
+talingitng"
+label_settings = SubResource("LabelSettings_ct2ey")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=291623600]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1197439912]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -79.0
+offset_right = 219.0
+grow_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_bottom = 15
+
+[node name="returnBtn" parent="MarginContainer" unique_id=1058588983 instance=ExtResource("3_5m7h7")]
+layout_mode = 2
+sceneTo = "res://MainMenu/MainMenu.tscn"
+
+[connection signal="pressed" from="MarginContainer/returnBtn" to="MarginContainer/returnBtn" method="_on_pressed"]

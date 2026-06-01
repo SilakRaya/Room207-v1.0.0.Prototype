@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://bhqgnwxgqx2go"]
+
+[ext_resource type="Texture2D" uid="uid://c3n5m11bflx1" path="res://SilakRaya-White.png" id="1_tb51g"]
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="2_frh1d"]
+
+[node name="Intro" type="Control" unique_id=1262709067]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1497372279]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1600690484]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="CenterContainer" unique_id=335741678]
+layout_mode = 2
+
+[node name="SilakRayaWhite" type="Sprite2D" parent="CenterContainer/Control" unique_id=261278341]
+texture = ExtResource("1_tb51g")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1169542536]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = -59.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="SkipButton" type="Button" parent="MarginContainer" unique_id=1329655000]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.87455684, 0.87455684, 0.87455684, 1)
+theme_override_fonts/font = ExtResource("2_frh1d")
+theme_override_font_sizes/font_size = 50
+text = "Click me to skip!"
+flat = true

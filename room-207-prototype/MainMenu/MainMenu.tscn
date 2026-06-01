@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bfbudafsb0ffh"]
+
+[ext_resource type="Texture2D" uid="uid://by8g0eys7wt8k" path="res://Ep1/Acosta/Jolina's Background.jpg" id="1_cruaa"]
+[ext_resource type="Script" uid="uid://d3m3r3ctm81tm" path="res://MainMenu/main_menu.gd" id="1_lbqne"]
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="2_b76km"]
+[ext_resource type="Texture2D" uid="uid://cw5kxmvo6iks8" path="res://SilakRayaLogo.png" id="3_b76km"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lbqne"]
+font = ExtResource("2_b76km")
+font_size = 200
+outline_size = 35
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_430ii"]
+font = ExtResource("2_b76km")
+font_size = 30
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control" unique_id=2071906680]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbqne")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1132093534]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AcostaBackground" type="Control" parent="PanelContainer" unique_id=1559479237]
+layout_mode = 2
+
+[node name="Jolina\'sBackground" type="Sprite2D" parent="PanelContainer/AcostaBackground" unique_id=1965609809]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_cruaa")
+centered = false
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer" unique_id=4313443]
+layout_mode = 2
+
+[node name="Menu" type="VBoxContainer" parent="PanelContainer/CenterContainer" unique_id=688609338]
+layout_mode = 2
+alignment = 1
+
+[node name="Room207" type="Label" parent="PanelContainer/CenterContainer/Menu" unique_id=650662992]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Room207"
+label_settings = SubResource("LabelSettings_lbqne")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewGame" type="Button" parent="PanelContainer/CenterContainer/Menu" unique_id=1487876664]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_b76km")
+theme_override_font_sizes/font_size = 80
+text = "New Game"
+flat = true
+icon_alignment = 1
+
+[node name="Options" type="Button" parent="PanelContainer/CenterContainer/Menu" unique_id=650966776]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_b76km")
+theme_override_font_sizes/font_size = 80
+text = "Options"
+flat = true
+icon_alignment = 1
+
+[node name="Credits" type="Button" parent="PanelContainer/CenterContainer/Menu" unique_id=997283242]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_b76km")
+theme_override_font_sizes/font_size = 80
+text = "Credits"
+flat = true
+icon_alignment = 1
+
+[node name="Exit" type="Button" parent="PanelContainer/CenterContainer/Menu" unique_id=955330097]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_fonts/font = ExtResource("2_b76km")
+theme_override_font_sizes/font_size = 80
+text = "Exit"
+flat = true
+icon_alignment = 1
+
+[node name="Version" type="MarginContainer" parent="PanelContainer" unique_id=1162490762]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="changeVerHere" type="Label" parent="PanelContainer/Version" unique_id=1867744292]
+layout_mode = 2
+text = "ver: 1.2.6.11-Proto"
+label_settings = SubResource("LabelSettings_430ii")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=1531747640]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -500.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.35, 0.35)
+pivot_offset_ratio = Vector2(1, 1)
+
+[node name="Node2D" type="TextureRect" parent="AspectRatioContainer" unique_id=1121651735]
+layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("3_b76km")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2004379967]
+
+[connection signal="pressed" from="PanelContainer/CenterContainer/Menu/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/Menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/Menu/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="PanelContainer/CenterContainer/Menu/Exit" to="." method="_on_exit_pressed"]

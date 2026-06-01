@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ba7ygsgo4cjwu"]
+
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="1_w0peo"]
+[ext_resource type="Script" uid="uid://u8h6htq4vmd1" path="res://MainMenu/return_btn.gd" id="2_lyw2s"]
+
+[node name="returnBtn" type="Button" unique_id=1058588983]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_right = 0.14765625
+anchor_bottom = 0.10972222
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("1_w0peo")
+theme_override_font_sizes/font_size = 70
+text = "Return"
+flat = true
+script = ExtResource("2_lyw2s")
+metadata/_edit_use_anchors_ = true

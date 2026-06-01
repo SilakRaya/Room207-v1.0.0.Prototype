@@ -31,12 +31,17 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Room207-Prototype"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/light_shape_2d/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
 "res://Blender/": "orange",
 "res://Ep1/": "yellow",
 "res://Fonts/": "green",
+"res://MainMenu/": "teal",
 "res://Ost/": "pink"
 }
 

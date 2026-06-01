@@ -86,6 +86,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_qbql7"]
 resource_name = "EpisodeSelection"
+length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -772,34 +773,6 @@ autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091699425]
 libraries/ = SubResource("AnimationLibrary_ekh7m")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1089140089]
-layout_mode = 0
-offset_top = 720.0
-offset_right = 1280.0
-offset_bottom = 1704.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=825715352]
-layout_mode = 0
-offset_top = -984.0
-offset_right = 1280.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=977900916]
-layout_mode = 0
-offset_left = 1280.0
-offset_top = -984.0
-offset_right = 2560.0
-offset_bottom = 1704.0
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="." unique_id=969485311]
-layout_mode = 0
-offset_left = -1280.0
-offset_top = -984.0
-offset_bottom = 1704.0
-color = Color(0, 0, 0, 1)
 
 [node name="devNote" type="Label" parent="." unique_id=2030213607]
 layout_mode = 0
