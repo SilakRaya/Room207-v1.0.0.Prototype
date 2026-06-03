@@ -38,6 +38,7 @@ func displayText(new_text: String) -> void:
 	%Text.text = _full_text
 
 func switchText() -> void:
+	
 	if typing:
 		return
 	
