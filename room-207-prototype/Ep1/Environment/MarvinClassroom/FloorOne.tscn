@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://ea61sjshx1fs" path="res://Ep1/Scenes/dialogue_event.gd" id="2_moit6"]
 [ext_resource type="Script" uid="uid://0o0r4ybyg4uc" path="res://Ep1/Scenes/camera_event.gd" id="3_1jegp"]
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="3_11hwv"]
-[ext_resource type="PackedScene" uid="uid://6mwtiksrfidh" path="res://MainMenu/debugging.tscn" id="5_11hwv"]
 [ext_resource type="Script" uid="uid://cgnlh8ubsqiok" path="res://Ep1/Characters/jolina_a_1.gd" id="5_27dpn"]
+[ext_resource type="PackedScene" uid="uid://3xv2dhxde70h" path="res://Ep1/Environment/Classroom/A1/Classroom.tscn" id="5_otmb6"]
 [ext_resource type="PackedScene" uid="uid://dt2xykj4k2h6m" path="res://Ep1/Characters/Jolina.tscn" id="6_1an53"]
 [ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1/GUI/Dialogue.tscn" id="6_11hwv"]
 [ext_resource type="PackedScene" uid="uid://c1jquii7lyxcc" path="res://Ep1/Characters/JolinaA1.tscn" id="6_cdqbc"]
@@ -14,9 +14,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhwjw"]
 size = Vector2(127, 128)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_27dpn"]
-size = Vector2(127, 130)
 
 [sub_resource type="Animation" id="Animation_27dpn"]
 resource_name = "FadeIn"
@@ -444,67 +441,14 @@ position = Vector2(5465, 845)
 scale = Vector2(104.98642, -2.9432998)
 metadata/_edit_group_ = true
 
-[node name="Icon" type="Sprite2D" parent="GroundFloor" unique_id=1632451165]
-modulate = Color(0.495847, 0.29349047, 0, 1)
-texture = ExtResource("3_11hwv")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GroundFloor" unique_id=400016844]
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_lhwjw")
 
-[node name="GroundFloor2" type="StaticBody2D" parent="." unique_id=571105503]
-unique_name_in_owner = true
-position = Vector2(-1547, -128.99998)
-scale = Vector2(4.7005324, 18.180653)
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="GroundFloor2" unique_id=1807216145]
-modulate = Color(0.495847, 0.29349047, 0, 1)
-texture = ExtResource("3_11hwv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundFloor2" unique_id=1581707067]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_lhwjw")
-
-[node name="GroundFloor3" type="StaticBody2D" parent="." unique_id=136757524]
-unique_name_in_owner = true
-position = Vector2(12383, -129.00002)
-scale = Vector2(4.7005324, 18.180653)
-metadata/_edit_group_ = true
-
-[node name="Icon" type="Sprite2D" parent="GroundFloor3" unique_id=1855687125]
-modulate = Color(0.495847, 0.29349047, 0, 1)
-texture = ExtResource("3_11hwv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundFloor3" unique_id=1417744547]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_lhwjw")
-
-[node name="ChairObstacles" type="StaticBody2D" parent="." unique_id=558117325]
-modulate = Color(1, 1, 1, 0.56700003)
-position = Vector2(8996, 486)
-scale = Vector2(6.812918, 6.179498)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="ChairObstacles" unique_id=1183963939]
-texture = ExtResource("3_11hwv")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ChairObstacles" unique_id=823076839]
-position = Vector2(-0.5, 1)
-shape = SubResource("RectangleShape2D_27dpn")
-debug_color = Color(0.841581, 0.32422376, 0.5307359, 0.41960785)
-
-[node name="EventObstacles" type="StaticBody2D" parent="." unique_id=1187264236]
-modulate = Color(1, 1, 1, 0.56700003)
-position = Vector2(4430.0005, 443.99997)
-scale = Vector2(6.812918, 6.179498)
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EventObstacles" unique_id=2122111596]
-position = Vector2(-0.5, 1)
-shape = SubResource("RectangleShape2D_27dpn")
-disabled = true
-debug_color = Color(0.841581, 0.32422376, 0.5307359, 0.41960785)
+[node name="Classroom" parent="." unique_id=1873672701 instance=ExtResource("5_otmb6")]
+z_index = -20
+position = Vector2(5023, -438)
+scale = Vector2(5, 5)
 
 [node name="Player" type="Node2D" parent="." unique_id=626920034]
 unique_name_in_owner = true
@@ -519,12 +463,6 @@ unique_name_in_owner = true
 position = Vector2(6538, 431)
 offset = Vector2(0, -50)
 zoom = Vector2(0.65, 0.65)
-
-[node name="Debugging" parent="Player/Camera2D" unique_id=1282438052 instance=ExtResource("5_11hwv")]
-offset_left = -634.0
-offset_top = -407.0
-offset_right = -634.0
-offset_bottom = -407.0
 
 [node name="Jolina" parent="Player" unique_id=810497922 instance=ExtResource("6_1an53")]
 unique_name_in_owner = true
@@ -587,32 +525,9 @@ attenuation = 0.6597538
 playback_type = 1
 parameters/looping = false
 
-[node name="devNote" type="Label" parent="." unique_id=688200195]
-offset_left = 5640.0
-offset_top = 1008.0
-offset_right = 6921.0
-offset_bottom = 1073.0
-theme_override_font_sizes/font_size = 47
-text = "- Keep in mind Jolina is bigger than the placeholder here!"
-
-[node name="devNote2" type="Label" parent="." unique_id=767353853]
-offset_left = 5640.0
-offset_top = 1112.0
-offset_right = 6921.0
-offset_bottom = 1177.0
-theme_override_font_sizes/font_size = 47
-text = "- The background setting is night time, we will use point light node to achieve that!"
-
-[node name="devNote3" type="Label" parent="." unique_id=417815304]
-offset_left = 8392.0
-offset_top = 968.0
-offset_right = 9930.0
-offset_bottom = 1101.0
-theme_override_font_sizes/font_size = 47
-text = "- This is a placeholder for the stacks chairs, it's to prevent the player
-going to the right side!"
-
 [node name="MobileControls" parent="." unique_id=1770030609 instance=ExtResource("8_he4fi")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=855894447]
 
 [connection signal="animation_finished" from="Event" to="DialogueEvent" method="_on_event_animation_finished"]
 [connection signal="animation_finished" from="CameraZoom" to="CameraEvent" method="_on_camera_zoom_animation_finished"]

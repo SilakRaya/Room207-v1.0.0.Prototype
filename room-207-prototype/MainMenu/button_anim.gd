@@ -15,6 +15,7 @@ func _ready() -> void:
 	for button in buttons:
 		button.pivot_offset = button.size / 2
 
+# This method is used for exiting
 func animate_button(button: Control, target_scale: Vector2, duration: float) -> void:
 	if button_tweens.has(button):
 		var old_tween = button_tweens[button]
@@ -26,6 +27,7 @@ func animate_button(button: Control, target_scale: Vector2, duration: float) -> 
 	tween.set_ease(Tween.EASE_OUT)
 	tween.tween_property(button, "scale", target_scale, duration)
 
+# This method is used for entering
 func set_hovered_button(hovered: Control) -> void:
 	for button in buttons:
 		if button == hovered:
