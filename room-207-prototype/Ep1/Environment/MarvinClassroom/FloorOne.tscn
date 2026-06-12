@@ -472,10 +472,10 @@ position = Vector2(6538, 511)
 [node name="Dialogue" parent="." unique_id=704191399 instance=ExtResource("6_11hwv")]
 unique_name_in_owner = true
 clip_contents = true
-offset_left = 6240.0
-offset_top = 288.0
-offset_right = 6839.0
-offset_bottom = 348.0
+offset_left = 6241.0
+offset_top = 248.0
+offset_right = 6840.0
+offset_bottom = 308.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
 _Jolina_Lines = Array[String](["...", "....", ".....", "Ughhh...", "My head feels fuzzy...", "...", "....", "Hmm...", "Where-", "Am-", "I?", "...", "....", "Hmm-", "...", "....", "This hallway doesn't looks like ours-", "...", "....", "Oh!", "I must be dreaming!", "...", "....", "huh?", "A Firefly?", "...", "HUH!", "HEY!", "WAIT UP!", "I need to follow that Firefly!", "..."])
 

@@ -1,19 +1,20 @@
 [gd_scene format=3 uid="uid://dt2xykj4k2h6m"]
 
 [ext_resource type="Script" uid="uid://b0535vjnbjm3s" path="res://Ep1/Characters/jolina.gd" id="1_w0kse"]
-[ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="2_fhl5q"]
+[ext_resource type="PackedScene" uid="uid://4p2ipknaqgew" path="res://Ep1/Characters/Jolina/JolinaIdle.tscn" id="2_4363e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3c18"]
-size = Vector2(126, 290)
+size = Vector2(126, 317)
 
 [node name="Jolina" type="CharacterBody2D" unique_id=810497922]
 script = ExtResource("1_w0kse")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=634151832]
-scale = Vector2(1, 2.2578125)
-texture = ExtResource("2_fhl5q")
+[node name="JolinaIdle" parent="." unique_id=134238791 instance=ExtResource("2_4363e")]
+position = Vector2(59, 7)
+scale = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582082926]
+position = Vector2(-18, -11.5)
 shape = SubResource("RectangleShape2D_f3c18")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=463188618]
